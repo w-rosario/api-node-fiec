@@ -1,0 +1,28 @@
+<h1>Formulário para alterar produto</h1>
+<fieldset>
+    <form action="/alterar_produto" method="POST">
+
+        <label>Id:</label>
+        <input type="text" name="id" value={{id}}><br><br>
+
+        <label>Produto:</label>
+        <input type="text" name="nome" value={{nome}}><br><br>
+
+        <label>Valor:</label>&nbsp&nbsp&nbsp&nbsp
+        <input type="number" name="valor" value={{valor}}><br><br>
+
+        <label>Quantidade</label>
+        <input type="text" name="qtd" size="16" pattern="[0-9]+$" value={{qtd}}><br><br>
+        <br>
+
+        <button type="submit">Alterar</button>
+    </form>
+</fieldset>
+
+<p><a href="/">Voltar</a></p>
+{{#each erro}}
+    {{texto}}
+    <br>
+{{else}}
+    {{erro}}
+{{/each}}

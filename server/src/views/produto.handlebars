@@ -1,0 +1,10 @@
+{{#each produtos}}
+        Produto:{{dataValues.nome}} <br>
+        Valor:{{dataValues.valor}} <br>
+        Quantidade:{{dataValues.quantidade}} <br>
+            <a href='/del-produto/{{dataValues.idproduto}}'><button>Apagar</button></a>
+            <a href='/pegar_produto/{{dataValues.idproduto}}'><button>Alterar</button></a>
+        <hr>
+{{/each}}
+
+<p><a href="/">Voltar</a></p>
